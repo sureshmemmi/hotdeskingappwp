@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hot-desking-app-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/hotDeskingApp/HotDeskingAppWebPart.js",
+          "manifest": "./src/webparts/hotDeskingApp/HotDeskingAppWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HotDeskingAppWebPartStrings": "lib/webparts/hotDeskingApp/loc/{locale}.js"
+  }
+}

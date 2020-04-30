@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "hotdeskingwp-client-side-solution",
+    "id": "ebedfe95-b559-49ad-bdc7-e3682c9e5062",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/hotdeskingwp.sppkg"
+  }
+}
