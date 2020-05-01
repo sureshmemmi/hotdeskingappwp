@@ -13,7 +13,11 @@ export default class HotDeskingApp extends React.Component<IHotDeskingAppProps, 
             <div className={ styles.column }>
               <span className={ styles.title }>Hot desk booking</span>
               <div>My bookings</div>
-              <div><PrimaryButton text="Book desk" /></div>
+              <div>
+                <PrimaryButton text="Wing A" />
+                <PrimaryButton text="Wing B" />
+                <PrimaryButton text="Wing C" />
+              </div>
             </div>
           </div>
         </div>
