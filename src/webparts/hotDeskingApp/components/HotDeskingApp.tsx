@@ -2,26 +2,15 @@ import * as React from 'react';
 import styles from './HotDeskingApp.module.scss';
 import { IHotDeskingAppProps } from './IHotDeskingAppProps';
 import { escape } from '@microsoft/sp-lodash-subset';
-import { PrimaryButton } from '@fluentui/react';
+import { PrimaryButton, Panel } from '@fluentui/react';
+import {Home} from  './Home'
+
 
 export default class HotDeskingApp extends React.Component<IHotDeskingAppProps, {}> {
+
   public render(): React.ReactElement<IHotDeskingAppProps> {
     return (
-      <div className={ styles.hotDeskingApp }>
-        <div className={ styles.container }>
-          <div className={ styles.row }>
-            <div className={ styles.column }>
-              <span className={ styles.title }>Hot desk booking</span>
-              <div>My bookings</div>
-              <div>
-                <PrimaryButton text="Wing A" />
-                <PrimaryButton text="Wing B" />
-                <PrimaryButton text="Wing C" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Home></Home>
     );
   }
 }
