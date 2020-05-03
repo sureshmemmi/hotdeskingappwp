@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styles from './HotDeskingApp.module.scss';
-import { PrimaryButton, Panel, DatePicker } from '@fluentui/react';
+import { PrimaryButton, Panel, DatePicker, ChoiceGroup, IChoiceGroupOption } from '@fluentui/react';
 import { useState } from 'react';
 import { useConstCallback } from '@uifabric/react-hooks';
 
@@ -9,6 +9,12 @@ export function Home(props){
 
     const openPanel = useConstCallback(() => setIsOpen(true));
     const dismissPanel = useConstCallback(() => setIsOpen(false));
+
+    const locationOptions: IChoiceGroupOption[] = [
+        { key: 'wingA', text: 'Wing A', iconProps: { iconName: 'MapPin12'} },
+        { key: 'wingB', text: 'Wing B', iconProps: { iconName: 'MapPin12'} },
+        { key: 'wingC', text: 'Wing C', iconProps: { iconName: 'MapPin12'} }
+    ]
     
     return (
         <div className={ styles.hotDeskingApp }>
@@ -27,6 +33,8 @@ export function Home(props){
                 >
                     
                     <DatePicker></DatePicker>
+                    <ChoiceGroup label="Select a location" defaultSelectedKey="wingA" options={locationOptions}></ChoiceGroup>
+
                 </Panel>
             </div>
             </div>
