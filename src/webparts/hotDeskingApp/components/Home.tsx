@@ -1,6 +1,12 @@
 import * as React from 'react';
 import styles from './HotDeskingApp.module.scss';
-import { PrimaryButton, Panel, DatePicker, ChoiceGroup, IChoiceGroupOption } from '@fluentui/react';
+import { PrimaryButton, 
+            Panel, 
+            DatePicker, 
+            ChoiceGroup, 
+            IChoiceGroupOption,
+            DetailsList
+         } from '@fluentui/react';
 import { useState } from 'react';
 import { useConstCallback } from '@uifabric/react-hooks';
 
@@ -15,6 +21,11 @@ export function Home(props){
         { key: 'wingB', text: 'Wing B', iconProps: { iconName: 'MapPin12'} },
         { key: 'wingC', text: 'Wing C', iconProps: { iconName: 'MapPin12'} }
     ]
+
+    const deskOptions: IChoiceGroupOption[] = [
+        { key: '1', text: 'Sitting desk', iconProps: { iconName: 'MapPin12'} },
+        { key: '2', text: 'Standing desk', iconProps: { iconName: 'MapPin12'} },
+    ]
     
     return (
         <div className={ styles.hotDeskingApp }>
@@ -24,6 +35,7 @@ export function Home(props){
             <span className={ styles.title }>Hot desk booking</span>
             <div>My bookings</div>
             <div>
+                <DetailsList />
                 <PrimaryButton text="Book a desk" onClick={openPanel} />
 
                 <Panel
@@ -34,6 +46,7 @@ export function Home(props){
                     
                     <DatePicker></DatePicker>
                     <ChoiceGroup label="Select a location" defaultSelectedKey="wingA" options={locationOptions}></ChoiceGroup>
+                    <ChoiceGroup label="Select a desk" defaultSelectedKey="1" options={deskOptions}></ChoiceGroup>
 
                 </Panel>
             </div>
