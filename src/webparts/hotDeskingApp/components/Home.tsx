@@ -35,7 +35,7 @@ export function Home(props){
             <span className={ styles.title }>Hot desk booking</span>
             <div>My bookings</div>
             <div>
-                <DetailsList />
+                <DetailsList items={} />
                 <PrimaryButton text="Book a desk" onClick={openPanel} />
 
                 <Panel
