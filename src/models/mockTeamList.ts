@@ -3,7 +3,7 @@ export interface ITeamMembers {
     fullName: string;
 }
 
-export let DeskList: ITeamMembers[] = [
+export let TeamMembersList: ITeamMembers[] = [
     {
         id: 1,
         fullName: "Suresh Memmi",

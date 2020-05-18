@@ -9,6 +9,7 @@ import { PrimaryButton,
          } from '@fluentui/react';
 import { useState } from 'react';
 import { useConstCallback } from '@uifabric/react-hooks';
+import { TeamMembersList } from '../../../models/mockTeamList';
 
 export function Home(props){
     const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,10 @@ export function Home(props){
         { key: '1', text: 'Sitting desk', iconProps: { iconName: 'MapPin12'} },
         { key: '2', text: 'Standing desk', iconProps: { iconName: 'MapPin12'} },
     ]
+
+    const columns = [
+        { key: 'column1', name: 'Full name', fieldName: 'fullname', minWidth: 100, maxWidth: 200, isResizable: true }
+      ];
     
     return (
         <div className={ styles.hotDeskingApp }>
@@ -35,7 +40,10 @@ export function Home(props){
             <span className={ styles.title }>Hot desk booking</span>
             <div>My bookings</div>
             <div>
-                <DetailsList items={} />
+                <DetailsList 
+                    items={TeamMembersList}
+                    columns={columns} />
+                    
                 <PrimaryButton text="Book a desk" onClick={openPanel} />
 
                 <Panel
