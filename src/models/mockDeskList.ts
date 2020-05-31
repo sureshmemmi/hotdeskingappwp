@@ -1,10 +1,6 @@
-export interface IDesks {
-    id: number;
-    deskType: string;
-    deskLocation: string;
-}
+import { IDesk } from "../Interfaces/IDesk";
 
-export let DeskList: IDesks[] = [
+export let DeskList: IDesk[] = [
     {
         id: 1,
         deskType: "Standard",

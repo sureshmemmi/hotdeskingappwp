@@ -1,9 +1,6 @@
-export interface ITeamMembers {
-    id: number;
-    fullName: string;
-}
+import { ITeamMember } from "../Interfaces/ITeamMember";
 
-export let TeamMembersList: ITeamMembers[] = [
+export let TeamMembersList: ITeamMember[] = [
     {
         id: 1,
         fullName: "Suresh Memmi",
